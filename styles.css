@@ -1,46 +1,74 @@
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #ffcc00;
+}
+
+.apply-btn {
+  background-color: #673ab7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.apply-btn:hover {
+  background-color: #512da8;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
   }
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+
+  .apply-btn {
+    font-size: 14px;
+    padding: 8px 15px;
   }
-  
-  /* Navbar */
-  .navbar {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-  }
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-  }
-  .nav-links a {
-    color: #ff0000;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover {
-    color: #fca311;
-  }
+}
   .mobile-menu {
     display: none;
     background: none;
@@ -525,4 +553,37 @@ body {
 .donors-banner h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffcc00;
+}
+
+.social-icons i {
+  display: inline-block;
 }
