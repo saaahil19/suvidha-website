@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+- Contact Us
+{% endblock %}
+
+{% block content %}
+<!-- Banner Section -->
+<section class="banner contact-banner">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We're here to assist you. Get in touch today!</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-info">
+      <h2>Reach Out to Us</h2>
+      <p>Email: info@suvidhafoundation.org</p>
+      <p>Phone: +91 7020044091</p>
+      <p>Address: Suvidha Foundation, Plot No. 123, Sector 45, Pune, Maharashtra, India</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

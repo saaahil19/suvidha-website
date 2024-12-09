@@ -1,90 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suvidha Foundation</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <div class="container">
-        <div>
-            <img src="img/logo1.png" alt="" id="logo1">
-        </div>      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="donors.html">Donors</a></li>
-        <li><a href="contact us.html">Contact Us</a></li>
-      </ul>
-      <button id="mobile-menu" class="mobile-menu"><i class="fas fa-bars"></i></button>
-    </div>
-  </nav>
-<!-- Apply For Internship Button (Redirects to Google Form) -->
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSe4vDnye2muE9yynJek6Swvamie2Idbu-LWAhQa0oMus5KJDg/viewform" target="_blank">
-    <button class="apply-btn">Apply For Internship</button>
-  </a>
+{% extends "layout.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
   <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Suvidha Foundation</h1>
-      <p>Empowering lives through education, healthcare, and community support.</p>
-      <a href="donate.html" class="btn btn-primary">Donate Now</a>
+  <section class="hero text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Welcome to Suvidha Foundation</h1>
+      <p class="lead">Empowering lives through education, healthcare, and community support.</p>
+      <a href="{{ url_for('donate') }}" class="btn btn-primary btn-lg">Donate Now</a>
     </div>
-  </header>
+  </section>
 
   <!-- About Section -->
-  <section class="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Suvidha Foundation is committed to uplifting underprivileged communities by providing education, healthcare, and resources for sustainable living.</p>
-      <a href="about.html" class="btn btn-secondary">Learn More</a>
+  <section class="about py-5">
+    <div class="container text-center">
+      <h2>Who We Are</h2>
+      <p class="lead">Suvidha Foundation is dedicated to uplifting underprivileged communities by providing resources and opportunities.</p>
+      <a href="{{ url_for('about') }}" class="btn btn-outline-primary">Learn More</a>
     </div>
   </section>
 
   <!-- Programs Section -->
-  <section class="programs">
+  <section class="programs py-5 bg-light">
     <div class="container">
-      <h2>Our Programs</h2>
-      <div class="program-cards">
-        <div class="card">
-          <img src="education.jpg" alt="Education">
-          <h3>Education</h3>
-          <p>Providing quality education for underprivileged children.</p>
+      <h2 class="text-center">Our Programs</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='images/education.jpg') }}" class="card-img-top" alt="Education">
+            <div class="card-body">
+              <h5 class="card-title">Education</h5>
+              <p class="card-text">Providing access to quality education for underprivileged children.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <img src="healthcare.jpg" alt="Healthcare">
-          <h3>Healthcare</h3>
-          <p>Improving healthcare facilities for marginalized communities.</p>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='images/healthcare.jpeg') }}" class="card-img-top" alt="Healthcare">
+            <div class="card-body">
+              <h5 class="card-title">Healthcare</h5>
+              <p class="card-text">Ensuring better healthcare facilities for all.</p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <img src="community.jpg" alt="Community Support">
-          <h3>Community Support</h3>
-          <p>Empowering communities through initiatives and programs.</p>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='images/community.jpeg') }}" class="card-img-top" alt="Community">
+            <div class="card-body">
+              <h5 class="card-title">Community Support</h5>
+              <p class="card-text">Empowering communities through various initiatives.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Suvidha Foundation. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="scripts.js"></script>
-</body>
-</html>
+{% endblock %}
+  

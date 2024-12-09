@@ -79,7 +79,7 @@ body, ul, li, a {
   
   /* Hero Section */
   .hero {
-    background: url('img/hero.jpg') no-repeat center/cover;
+    background: url('../images/hero.jpg') no-repeat center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -391,7 +391,7 @@ body {
 
 /* Banner Section */
 .contact-banner {
-  background-image: url('img/contactbanner.jpeg');
+  background-image: url('../images/contactbanner.jpeg');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
@@ -442,7 +442,7 @@ body {
 
 /* Banner Section */
 .events-banner {
-  background-image: url('events-banner.jpg');
+  background-image: url('../images/eventbanner.jpg');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
@@ -496,7 +496,7 @@ body {
 
 /* Banner Section */
 .gallery-banner {
-  background-image: url('gallery-banner.jpg');
+  background-image: url('../images/gallerybanner.jpg');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
@@ -543,7 +543,7 @@ body {
 
 /* Banner Section */
 .donors-banner {
-  background-image: url('donors-banner.jpg');
+  background-image: url('../images/donorsbanner.jpg');
   background-size: cover;
   background-position: center;
   padding: 80px 20px;
