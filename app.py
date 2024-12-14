@@ -33,11 +33,11 @@ def contact():
 @app.route('/submit_donation', methods=['POST'])
 def submit_donation():
     name = request.form['name']
-    email = request.form['email']
-    phone = request.form['phone']
-    amount = request.form['amount']
-    message = request.form['message']
-    # Process the form data here
+    # email = request.form['email']
+    # phone = request.form['phone']
+    # amount = request.form['amount']
+    # message = request.form['message']
+    # # Process the form data here
     return redirect(url_for('thank_you', name=name))
 
 @app.route('/thank_you')
