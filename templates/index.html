@@ -5,6 +5,8 @@
 
 {% block content %}
 
+<!----------------------- landing page ------------------------->
+
 <header class="hero">
   <div class="container">
     <div class="overlay">
@@ -15,6 +17,159 @@
   </div>
 </header>
 
+<!------------------------ landing page 2 ------------------------>
+
+<section class="info-section">
+  <h1>OUR COMMITMENT</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col impact">
+        <img src="{{ url_for('static', filename='images/dense-forest.jpg') }}" alt="" class="col-image">
+        <!-- <button onclick="location.href='{{ url_for('events') }}'"> -->
+        <button>
+          <i class="fa-solid fa-leaf" style="color: #8BC34A;"></i>
+          <h2>Making a Greener Planet</h2>
+          <p>Suvidha Foundation is dedicated to environmental sustainability, with over 54 lakh trees planted through our tree plantation drives. We also promote eco-friendly initiatives like waste management and environmental workshops, working towards a cleaner, greener future.</p>
+        </button>
+      </div>
+      <div class="col involved">
+        <img src="{{ url_for('static', filename='images/donation-full.jpg') }}" alt="" class="col-image">
+        <!-- <button onclick="location.href='{{ url_for('about') }}'"> -->
+        <button>
+          <i class="fa-solid fa-heart" style="color: #E91E63;"></i>
+          <h2>Transforming Lives with Love and Care</h2>
+          <p>Our social programs provide food, clothes, and free workshops to the underprivileged, helping to alleviate poverty and empower communities with care and support for a better future.</p>
+        </button>
+      </div>
+      <div class="col stories">
+        <img src="{{ url_for('static', filename='images/taxexemption.jpg') }}" alt="" class="col-image">
+        <!-- <button onclick="location.href='{{ url_for('donate') }}'"> -->
+        <button>
+          <i class="fa-solid fa-circle-dollar-to-slot" style="color: #FFC107;"></i>
+          <h2>Getting donations tax exempted</h2>
+          <p>As a registered nonprofit, we ensure that your donations are eligible for tax exemptions under applicable laws. Support our cause and benefit from meaningful contributions that make a difference to both society and your tax filings.</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!---------------------- landing page 3 -------------------------------->
+
+<section class="landing3">
+  <div class="container">
+    <div class="row">
+      <div class="col-first">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="col-12">
+              <img src="{{ url_for('static', filename='images/image-10.jpg') }}" class="img-fluid large-image" alt="Large Image">
+              <img src="{{ url_for('static', filename='images/hug.jpg') }}" class="img-fluid small-image" alt="Small Image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-second">
+        <div class="inner-container">
+          <div class="header"><img src="{{ url_for('static', filename='images/handshakeNew.png') }}" alt="handshake" class="handshake-icon" height="75"></div>
+          <div class="sponsor">SPONSOR A CHILD</div>
+          <div class="description">Amazing kids deserve amazing sponsors like you</div>
+          <div class="details">The children we meet are amazing and awe-inspiring. They’ve struggled through more in their few years than most people in their entire lives yet still find the strength to smile, play and hope. Your generosity through sponsorship can empower a child to overcome poverty and the struggles faced daily. It only takes $50/month to fully sponsor a child. With your sponsorship, the child you help will receive direct support like food, clean water, uniforms, educational supplies, education, medical care and perhaps most important of all - the hope and love that comes from knowing someone truly cares about their wellbeing.</div>
+          <button class="btn get-involved" onclick="location.href='{{ url_for('donate') }}'">Get Involved</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!---------------------------- landing page 4 ------------------------>
+<section class="landing4">
+<div class="container section-container">
+  <div class="row justify-content-center g-4">
+    <!-- First box -->
+    <div class="col-md-6">
+      <div class="custom-box">
+          <div class="custom-line"></div>
+          <h2>Internship oppotunities</h2>
+          <p>The Suvidha Foundation Internship Program is a unique opportunity for students and recent graduates to gain experience and contribute to the work of Suvidha Foundation. Join our team and gain valuable experience while making a difference. Apply now to start your journey with us!</p>
+          <button class="btn btn-custom">Apply for Internship</button>
+      </div>
+    </div>
+    <!-- Second box -->
+     <div class="col-md-6">
+      <div class="custom-box">
+        <div class="custom-line"></div>
+        <h2>Donate now</h2>
+        <p>Your contributions help us continue our mission. Donate now to support our cause and make an impact!</p>
+        <button class="btn btn-custom">Donate here</button>
+      </div>
+     </div>
+  </div>
+</div>
+</section>
+
+<!---------------------------------- testimonials ------------------------------>
+
+<section class="testimonial-slider">
+  <h2>Over 3 lakh volunteers.</h2>
+  <div class="slider-container">
+    <div class="slider-track-wrapper">
+      <ul class="testimonial-list">
+        <li class="testimonial-item">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>The internship was an incredible learning experience!</p>
+          <h4>Intern A</h4>
+        </li>
+        <li class="testimonial-item">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Working with the foundation was both rewarding and inspiring.</p>
+          <h4>Intern B</h4> 
+        </li>
+        <li class="testimonial-item">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>I gained hands-on experience and grew professionally.</p>
+          <h4>Intern C</h4>
+        </li>
+        <li class="testimonial-item">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>The team was supportive and provided excellent guidance.</p>
+          <h4>Intern D</h4>
+        </li>
+        <li class="testimonial-item">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>This internship boosted my confidence and skills.</p>
+          <h4>Intern E</h4>
+        </li>
+      </ul>
+    </div>
+    <button class="slider-btn slider-btn-left">&#10094;</button>
+    <button class="slider-btn slider-btn-right">&#10095;</button>
+  </div>
+  <div class="button-container">
+    <a href="https://drive.google.com" class="view-all-button" target="_blank">View All</a>
+  </div>
+</section>
+
+
+
+<!-- <section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>About Us</h2>
+        <p>Suvidha Foundation is dedicated to empowering children and women through education and skill development programs.</p>
+      </div>
+      <div class="col">
+        <h2>Mission</h2>
+        <p>Our mission is to create opportunities for underprivileged communities to achieve self-sufficiency and improve their quality of life.</p>
+      </div>
+      <div class="col">
+        <h2>Vision</h2>
+        <p>We envision a world where every child and woman has the resources and support they need to thrive and reach their full potential.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
 
     <!-- <h1 class="display-4">Welcome to Suvidha Foundation</h1>
     <p class="lead">Where every small step makes a giant leap for humanity!</p>
@@ -43,7 +198,7 @@
     </div>
 </section>
 
-  <!-- Programs Section -->
+Programs Section
   <section class="programs py-5 bg-light">
     <div class="container">
       <h2 class="text-center">Our Programs</h2>
@@ -77,6 +232,40 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> --->
+
+<!------------ script for testimonial slider --------------->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const list = document.querySelector(".testimonial-list");
+    const leftBtn = document.querySelector(".slider-btn-left");
+    const rightBtn = document.querySelector(".slider-btn-right");
+    const itemWidth = document.querySelector(".testimonial-item").offsetWidth + 20; // Account for gaps
+    let currentPosition = 0;
+  
+    // Function to update button visibility
+    function updateButtons() {
+      const maxPosition = -(list.scrollWidth - list.parentElement.offsetWidth);
+      leftBtn.disabled = currentPosition === 0; // Disable left button at the start
+      rightBtn.disabled = currentPosition <= maxPosition; // Disable right button at the end
+    }
+  
+    leftBtn.addEventListener("click", () => {
+      currentPosition = Math.min(currentPosition + itemWidth, 0); // Move right
+      list.style.transform = `translateX(${currentPosition}px)`;
+      updateButtons();
+    });
+  
+    rightBtn.addEventListener("click", () => {
+      const maxPosition = -(list.scrollWidth - list.parentElement.offsetWidth);
+      currentPosition = Math.max(currentPosition - itemWidth, maxPosition); // Move left
+      list.style.transform = `translateX(${currentPosition}px)`;
+      updateButtons();
+    });
+  
+    // Initialize buttons on load
+    updateButtons();
+  });  
+</script>
 {% endblock %}
   

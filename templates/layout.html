@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suvidha Foundation {% block title %}{% endblock %}</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -59,7 +60,7 @@
 
 
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="footer-content">
       <p>© 2024 Suvidha Foundation. All rights reserved.</p>
       <div class="social-icons">  
@@ -69,7 +70,7 @@
         <a href="tel:+91 7020044091" aria-label="Phone"><i class="fa fa-phone"></i></a>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 
   <!---------- fixed social links ---------->
@@ -85,6 +86,51 @@
         </a>
     </li>
   </ul> 
+
+<!------------------- footer -------------------->
+
+<footer>
+  <div class="footer-wrapper">
+    <div class="headquarters">
+      <h3>Suvidha Foundation (Suvidha Mahila Mandal)</h3>
+      <i class="fas fa-map-marker-alt icon"></i>
+      <h4>Office headquarters</h4>
+      <p class="bold">Nagpur Headquarter</p>
+      <p>Suvidha Foundation, Motghare Bhavan, Ward No. 4, Santnagar, Annamod, Near Water Tank, Khaperkheda, Saoner, Nagpur, Maharashtra, India Pincode - 441102</p>
+      <p class="bold">Hyderabad Headquarter</p>
+      <p>Vazhra Nirman Pushpak, C Block 701, 500090, Hyderabad</p>
+      <i class="far fa-envelope-open icon"></i>
+      <span class="bold">Mail Us</span> <span><a href="" target="_blank" class="footer-links">info@suvidhafoundationedutech.org</a></span>
+    </div>
+
+    <div class="certificates">
+      <h3>Certificates</h3>
+      <div class="custom-line"></div>
+      <ul>
+        <li><a href="" target="_blank" class="footer-links">80G certificate</a></li>
+        <li><a href="" target="_blank" class="footer-links">12A certificate</a></li>
+        <li><a href="" target="_blank" class="footer-links">CSR certificate</a></li>
+        <li><a href="" target="_blank" class="footer-links">Suvidha Darpan Registration</a></li>
+        <li><a href="" target="_blank" class="footer-links">Suvidha Pan Card</a></li>
+      </ul>
+    </div>
+
+    <div class="other-links">
+      <h3>Useful Links</h3>
+      <div class="custom-line"></div>
+      <ul>
+        <li><a href="" target="_blank" class="footer-links">Verify your certificates</a></li>
+        <li><a href="" target="_blank" class="footer-links">Free kids coding bootcamp</a></li>
+        <li><a href="" target="_blank" class="footer-links">Contact Us</a></li>
+        <li><a href="" target="_blank" class="footer-links">Privacy policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright &copy; 2024 Suvidha Foundation (Suvidha Mahila Mandal). All rights reserved.</p>
+  </div>
+</footer>
 
   <!------------ script for navbar animation --------------->
   <script>
