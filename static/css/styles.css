@@ -237,6 +237,83 @@ body, ul, li, a {
   }
 }
 
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.navbar-toggler .navbar-toggler-lines {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  display: none;
+}
+
+.navbar-toggler .navbar-toggler-lines::before,
+.navbar-toggler .navbar-toggler-lines::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    left: 0;
+}
+
+.navbar-toggler .navbar-toggler-lines::before {
+  top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-lines::after {
+  top: 8px;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-lines::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-lines::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-lines {
+  background-color: transparent;
+}
+
+/* Responsive Adjustments for Toggler Button */
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-toggler .navbar-toggler-lines {
+    width: 35px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-toggler {
+      padding: 12px;
+  }
+
+  .navbar-toggler .navbar-toggler-lines {
+      width: 40px;
+      height: 4px;
+  }
+}
+
 footer {
   background-color: rgb(27, 34, 80);
   color: #f2f2f2;

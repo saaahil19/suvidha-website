@@ -59,6 +59,14 @@ ul.breadcrumb li a:hover {
     color: #f7e410;
 }
 
+/* Responsive Breadcrumb */
+@media (max-width: 768px) {
+    ul.breadcrumb li {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+
 /* --------------------------------  Support our campaign ---------------------------------------------- */
 
 .donate-section {
@@ -134,6 +142,67 @@ ul.breadcrumb li a:hover {
 
 .donate-button:hover {
     background-color: #218838;
+}
+
+/* Responsive Donate Section */
+@media (max-width: 992px) {
+    .donate-container {
+        gap: 1rem;
+    }
+
+    .donate-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        min-height: 250px;
+    }
+
+    .donate-section h1 {
+        font-size: 2rem;
+    }
+
+    .donate-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .donate-card h2 {
+        font-size: 1.25rem;
+    }
+
+    .donate-card p {
+        font-size: 0.9rem;
+    }
+
+    .donate-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .parallax {
+        background-size: cover;
+        min-height: 200px;
+    }
+
+    ul.breadcrumb {
+        margin-top: 50px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 0.9rem;
+    }
+
+    .donate-section {
+        padding: 1rem;
+    }
 }
 
 /*----------------------- bank details section -----------------------*/
@@ -214,4 +283,64 @@ ul.breadcrumb li a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Bank Details Section */
+@media (max-width: 992px) {
+    .bank-details-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .bank-details {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1.5rem;
+        padding-right: 0;
+    }
+
+    .qr-code {
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+
+    .qr-code img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bank-details-section h2 {
+        font-size: 2rem;
+    }
+
+    .bank-details li {
+        font-size: 0.95rem;
+    }
+
+    .qr-code p {
+        font-size: 1.2rem;
+    }
+
+    .bank-details-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .bank-details-section {
+        padding: 1rem;
+    }
+
+    .bank-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .bank-details li {
+        font-size: 0.9rem;
+    }
+
+    .qr-code p {
+        font-size: 1rem;
+    }
 }
