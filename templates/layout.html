@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suvidha Foundation {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,79 +12,65 @@
 </head>
 
 <body>
-  <!-------------- navbar ---------------->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand ms-3" href="/">
-          <img src="{{ url_for('static', filename='images/Suvidhalogo.png') }}" alt="Suvidha Foundation Logo" id="logo" title="Go to home page">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == url_for('events') %}active{% endif %}" href="{{ url_for('events') }}">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == url_for('gallery') %}active{% endif %}" href="{{ url_for('gallery') }}">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link {% if request.path == url_for('donors') %}active{% endif %}" href="{{ url_for('donors') }}">Donors</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-              <li class="nav-item apply-link">
-                <a class="nav-link btn custom-rounded" href="https://docs.google.com/forms/d/e/1FAIpQLSe4vDnye2muE9yynJek6Swvamie2Idbu-LWAhQa0oMus5KJDg/viewform" target="_blank" rel="noopener noreferrer">Apply for Internship</a>
+<!-------------- navbar ---------------->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="/">
+        <img src="{{ url_for('static', filename='images/Suvidhalogo.png') }}" alt="Suvidha Foundation Logo" id="logo" title="Go to home page">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
               </li>
-              <li class="nav-item donate-link">
-                <a class="nav-link btn custom-rounded" href="{{ url_for('donate') }}">Donate now</a>
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About Us</a>
               </li>
-            </ul>
-          </div>
-    </div>
-  </nav>
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == url_for('events') %}active{% endif %}" href="{{ url_for('events') }}">Events</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == url_for('gallery') %}active{% endif %}" href="{{ url_for('gallery') }}">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.path == url_for('donors') %}active{% endif %}" href="{{ url_for('donors') }}">Donors</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item apply-link">
+              <a class="nav-link btn custom-rounded" href="https://docs.google.com/forms/d/e/1FAIpQLSe4vDnye2muE9yynJek6Swvamie2Idbu-LWAhQa0oMus5KJDg/viewform" target="_blank" rel="noopener noreferrer">Apply for Internship</a>
+            </li>
+            <li class="nav-item donate-link">
+              <a class="nav-link btn custom-rounded" href="{{ url_for('donate') }}">Donate now</a>
+            </li>
+          </ul>
+        </div>
+  </div>
+</nav>
 
 
 {% block content %}{% endblock %}
 
 
-
-  <!-- <footer class="footer">
-    <div class="footer-content">
-      <p>© 2024 Suvidha Foundation. All rights reserved.</p>
-      <div class="social-icons">  
-        <a href="https://www.instagram.com/suvidha_mahila_mandal/?igshid=YmMyMTA2M2Y%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/suvidha-foundation/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="info@suvidhafoundationedutech.org" aria-label="Email"><i class="fa fa-envelope"></i></a>
-        <a href="tel:+91 7020044091" aria-label="Phone"><i class="fa fa-phone"></i></a>
-      </div>
-    </div>
-  </footer> -->
-
-
-  <!---------- fixed social links ---------->
-  <ul class="navbar-nav fixed-social-links">
-    <li class="nav-item">
-        <a class="nav-link social-link" href="https://www.linkedin.com/company/suvidha-foundation/" target="_blank">
-          <i class="fa-brands fa-linkedin fa-xl"></i>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link social-link" href="https://www.instagram.com/suvidha_mahila_mandal/" target="_blank">
-            <i class="fab fa-instagram fa-xl"></i>
-        </a>
-    </li>
-  </ul> 
+<!---------- fixed social links ---------->
+<ul class="navbar-nav fixed-social-links">
+  <li class="nav-item">
+      <a class="nav-link social-link" href="https://www.linkedin.com/company/suvidha-foundation/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-xl"></i>
+      </a>
+  </li>
+  <li class="nav-item">
+      <a class="nav-link social-link" href="https://www.instagram.com/suvidha_mahila_mandal/" target="_blank">
+          <i class="fab fa-instagram fa-xl"></i>
+      </a>
+  </li>
+</ul> 
 
 <!------------------- footer -------------------->
 
@@ -132,19 +117,19 @@
   </div>
 </footer>
 
-  <!------------ script for navbar animation --------------->
-  <script>
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      const fixedsociallinks = document.querySelector('.fixed-social-links');
-      if (window.scrollY > 100) {
-          navbar.classList.add('animate');
-          fixedsociallinks.classList.add('animate');
-      } else {
-          navbar.classList.remove('animate');
-          fixedsociallinks.classList.remove('animate');
-      }
-  });
-  </script>
+<!------------ script for navbar animation --------------->
+<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    const fixedsociallinks = document.querySelector('.fixed-social-links');
+    if (window.scrollY > 100) {
+        navbar.classList.add('animate');
+        fixedsociallinks.classList.add('animate');
+    } else {
+        navbar.classList.remove('animate');
+        fixedsociallinks.classList.remove('animate');
+    }
+});
+</script>
 </body>
 </html>

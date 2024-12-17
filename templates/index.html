@@ -59,7 +59,7 @@
 <section class="landing3">
   <div class="container">
     <div class="row">
-      <div class="col-first">
+      <div class="col-first col-md-6 col-12">
         <div class="container position-relative">
           <div class="row">
             <div class="col-12">
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="col-second">
+      <div class="col-second col-md-6 col-12">
         <div class="inner-container">
           <div class="header"><img src="{{ url_for('static', filename='images/handshakeNew.png') }}" alt="handshake" class="handshake-icon" height="75"></div>
           <div class="sponsor">SPONSOR A CHILD</div>
@@ -150,100 +150,15 @@
   </div>
 </section>
 
-
-
-<!-- <section class="about-section">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>About Us</h2>
-        <p>Suvidha Foundation is dedicated to empowering children and women through education and skill development programs.</p>
-      </div>
-      <div class="col">
-        <h2>Mission</h2>
-        <p>Our mission is to create opportunities for underprivileged communities to achieve self-sufficiency and improve their quality of life.</p>
-      </div>
-      <div class="col">
-        <h2>Vision</h2>
-        <p>We envision a world where every child and woman has the resources and support they need to thrive and reach their full potential.</p>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-    <!-- <h1 class="display-4">Welcome to Suvidha Foundation</h1>
-    <p class="lead">Where every small step makes a giant leap for humanity!</p>
-    <a href="{{ url_for('donate') }}" class="btn btn-lg btn-cta mt-3">Join the Movement</a> -->
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="path/to/story1.jpg" class="card-img-top" alt="Story Image">
-        <div class="card-body">
-          <h5 class="card-title">Story Title</h5>
-          <p class="card-text">Brief story description.</p>
-        </div>
-      </div>
-    </div>
-     Repeat for more stories
-  </div>
-</div> -->
-
-  <!-- About Section
-<section class="about py-5">
-    <div class="container text-center">
-      <h2>Who We Are</h2>
-      <p class="lead">Suvidha Foundation is dedicated to uplifting underprivileged communities by providing resources and opportunities.</p>
-      <a href="{{ url_for('about') }}" class="btn btn-outline-primary">Learn More</a>
-    </div>
-</section>
-
-Programs Section
-  <section class="programs py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center">Our Programs</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="{{ url_for('static', filename='images/education.jpg') }}" class="card-img-top" alt="Education">
-            <div class="card-body">
-              <h5 class="card-title">Education</h5>
-              <p class="card-text">Providing access to quality education for underprivileged children.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="{{ url_for('static', filename='images/healthcare.jpeg') }}" class="card-img-top" alt="Healthcare">
-            <div class="card-body">
-              <h5 class="card-title">Healthcare</h5>
-              <p class="card-text">Ensuring better healthcare facilities for all.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="{{ url_for('static', filename='images/community.jpeg') }}" class="card-img-top" alt="Community">
-            <div class="card-body">
-              <h5 class="card-title">Community Support</h5>
-              <p class="card-text">Empowering communities through various initiatives.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --->
-
 <!------------ script for testimonial slider --------------->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const list = document.querySelector(".testimonial-list");
     const leftBtn = document.querySelector(".slider-btn-left");
     const rightBtn = document.querySelector(".slider-btn-right");
-    const itemWidth = document.querySelector(".testimonial-item").offsetWidth + 20; // Account for gaps
+    const itemWidth = document.querySelector(".testimonial-item").offsetWidth + 20;
     let currentPosition = 0;
   
-    // Function to update button visibility
     function updateButtons() {
       const maxPosition = -(list.scrollWidth - list.parentElement.offsetWidth);
       leftBtn.disabled = currentPosition === 0; // Disable left button at the start
@@ -263,7 +178,6 @@ Programs Section
       updateButtons();
     });
   
-    // Initialize buttons on load
     updateButtons();
   });  
 </script>
