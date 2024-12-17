@@ -8,7 +8,12 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    images = [
+        url_for('static', filename='images/socialwork.jpg'),
+        url_for('static', filename='images/treeplant.jpg'),
+        url_for('static', filename='images/Suvidha-3.jpg')
+    ]
+    return render_template('about.html', images=images)
 
 @app.route('/donate')
 def donate():

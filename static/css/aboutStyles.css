@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+/* ------------------------------------ navbar ---------------------------------------*/
+.navbar {
+    background-color: transparent;
+}
+
+.navbar.animate {
+    background-color: white;
+}
+
+.navbar-nav .apply-link .custom-rounded {
+    color: white;
+}
+
+.navbar.animate .nav-link {
+    color: #000;
+}
+
+.navbar-nav .donate-link .custom-rounded {
+    background-color: #c54d6d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.navbar-nav .donate-link .custom-rounded:hover {
+    background: linear-gradient(135deg, #c54d6d, #8a3c54); 
+    background-color: #c54d6d;
+}
+
+/* ---------------------------------- banner -----------------------------*/
+
+.about-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/award.jpeg);
+    min-height: 550px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul.breadcrumb {
+    padding: 10px 20px;
+    list-style: none;
+    border-radius: 5px;
+    margin-top: 75px;
+}
+  
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 30px;
+}
+  
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #dfba32;
+    content: "/\00a0";
+}
+  
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #dfba32;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(249, 66, 5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #f7e410;
+}
+
+/* ------------------------------- what we do (about us) ------------------------------*/
+
+.about-welcome {
+    text-align: center;
+    font-size: 56px;
+    color: #000;
+    margin: 30px 0;
+}
+
+.social-work {
+    height: 550px;
+    padding: 20px;
+}
+
+.mission-wrapper {
+    background-image: url(../images/texture.png);
+    background-blend-mode: multiply;
+    padding: 50px 0;
+}
+
+.what-we-do {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+  
+.what-we-do h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    font-size: 70px;
+    color: #d55342;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.what-we-do p {
+    font-family: "Crimson Text", serif;
+    color: #254151;
+    font-weight: bold;
+}
+
+.mission-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.mission-box {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.overlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: transform 0.3s ease;
+}
+  
+.mission-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    margin: 0;
+}
+
+.mission-box:hover .overlay {
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+    .what-we-do {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .what-we-do h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-row {
+        flex-direction: column;
+    }
+
+    .mission-box {
+        max-width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .what-we-do {
+        width: 90%;
+    }
+    
+    .what-we-do p {
+        font-size: 1rem;
+    }
+
+    .mission-container {
+        gap: 15px;
+    }
+
+    .mission-box p {
+        font-size: 1rem;
+    }
+}
+
+/* our team */
+.team-heading {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: #d55342;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.team-wrapper {
+    align-items: center;
+    background-color: #f2f2f2;
+    display: flex;
+    font-family: "Merriweather", serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 0px;
+}
+
+.person {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.person .container {
+    border-radius: 50%;
+    height: 312px;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.48);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 280px;
+}
+
+.person .container:hover {
+    transform: scale(0.54);
+}
+
+.container-inner {
+    position: relative;
+    top: -250px;
+}
+
+/* .circle {
+    background-color: #fee7d3;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 380px;
+    left: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 210px;
+    width: 380px;
+} */
+
+.img {
+    pointer-events: none;
+    position: relative;
+}
+
+.img1 {
+    left: -25px;
+    top: 164px;
+    width: 375px;
+}
+
+.img2 {
+    left: -40px;
+    top: 174px;
+    width: 375px;
+}
+
+.img3 {
+    left: -16px;
+    top: 144px;
+    width: 375px;
+}
+
+.img4 {
+    left: -15px;
+    top: 150px;
+    width: 375px;
+}
+
+.divider {
+    background-color: #ca6060;
+    height: 1px;
+    width: 160px;
+}
+
+.name {
+    color: #404245;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.title {
+    color: #6e6e6e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 4px;
+}

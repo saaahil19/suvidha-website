@@ -1,0 +1,217 @@
+.navbar {
+    background-color: transparent;
+}
+
+.navbar.animate {
+    background-color: white;
+}
+
+.navbar-nav .apply-link .custom-rounded {
+    color: white;
+}
+
+.navbar.animate .nav-link {
+    color: #000;
+}
+
+.parallax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/DonationBanner.jpg);
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul.breadcrumb {
+    padding: 10px 20px;
+    list-style: none;
+    border-radius: 5px;
+    margin-top: 75px;
+}
+  
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 30px;
+}
+  
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #dfba32;
+    content: "/\00a0";
+}
+  
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #dfba32;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(249, 66, 5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #f7e410;
+}
+
+/* --------------------------------  Support our campaign ---------------------------------------------- */
+
+.donate-section {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 2rem;
+}
+
+.donate-section h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #d55342;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.donate-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.donate-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.donate-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #555;
+}
+
+.donate-card p {
+    font-family: "Crimson Text", serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #254151;
+}
+
+.donation-amount {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+
+/* Donate Button */
+.donate-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #218838;
+}
+
+/*----------------------- bank details section -----------------------*/
+
+.bank-details-section {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.bank-details-section h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #d55342;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 1.5rem;
+}
+
+.bank-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.bank-details {
+    flex: 1;
+    text-align: left;
+    padding-right: 1rem;
+    border-right: 1px solid #ddd;
+}
+
+.bank-details h3 {
+    margin-bottom: 20px;
+}
+
+.bank-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bank-details li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.bank-details strong {
+    color: #333;
+}
+
+.qr-code {
+    flex: 1;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.qr-code p {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.qr-code img {
+    max-width: 400px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

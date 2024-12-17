@@ -4,46 +4,48 @@
 - About us
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aboutStyles.css') }}">
+{% endblock %}
+
 {% block content %}
-<section class="about">
-    <h2>About Us</h2>
-    <p><strong>Suvidha Mahila Mandal</strong>, established on <strong>September 8, 1995</strong>, is a non-profit organization working to impart education among the financially challenged sections to help them realize parity in education and the strength of little minds in building a promising future.</p>
-    <p>The organization has provisions for <strong>student internships, mentorship programs, and volunteering opportunities</strong>. Through these initiatives, Suvidha Foundation aims to achieve the vision of imparting innovative education that stays with students forever and equips them for the unforeseen future.</p>
-</section>
+<header>
+  <div class="about-header">
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="#">About us</a></li>
+    </ul>
+  </div>
+</header>
 
-<section class="mission">
-    <h2>Our Mission</h2>
-    <p>To inspire students, help them innovate, and let them integrate to build the next generation humankind.</p>
-    <p>To run food donation and awareness campaigns in rural regions.</p>
-</section>
-
-<section class="vision">
-    <h2>Our Vision</h2>
-    <p>To build the next generation of entrepreneurs by providing them with skill-based education.</p>
-    <p>To provide internships, training, workshops, and quality education all over the world.</p>
-</section>
+<div class="about-welcome">
+  <h1>Welcome to Suvidha</h1>
+  <img id="changingImage" src="{{ url_for('static', filename='images/socialwork.jpg') }}" alt="" class="social-work">
+  <button id="changeButton" class="changeButton">&#10095;</button>
+</div>
 
 <section class="mission-wrapper">
-    <h2>
-      What We Do.
-    </h2>
+    <div class="what-we-do">
+      <h2>What We Do.</h2>
+      <p>Suvidha provides assistance to people and communities in need and empowers them to become sustainable, independent and proud. How and where we contribute is based on the cultural challenges and strengths of a community as defined by its most precious resource-the people. We use your support to build schools, provide educational materials, create sustainable food programs and provide hope.</p>
+    </div>
     <div class="container mission-container">
       <div class="row mission-row">
         <div class="col-md-4 mission-col">
           <div class="box mission-box">
-            <p>Donates nutritious food</p>
+            <p>We nourish</p>
             <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="" class="img-fluid overlay">
           </div>
         </div>
         <div class="col-md-4 mission-col">
           <div class=" mission-box">
-            <p>Provides accessible healthcare services</p>
+            <p>We assist</p>
             <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="" class="img-fluid overlay">
           </div>
         </div>
         <div class="col-md-4 mission-col">
           <div class="box mission-box">
-            <p>Offers Primary education</p>
+            <p>We educate</p>
             <img src="{{ url_for('static', filename='images/education.jpg') }}" alt="" class="img-fluid overlay">
           </div>
         </div>
@@ -51,14 +53,14 @@
       <div class="row mission-row">
         <div class="col-md-4 mission-col">
           <div class="box  mission-box">
-            <p>Promotes Social awareness</p>
+            <p>We build</p>
             <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="" class="img-fluid overlay">
           </div>
         </div>
         <div class="col-md-4 mission-col">
           <div class="box mission-box">
             <p>Conducts Tree plantation drives</p>
-            <img src="{{ url_for('static', filename='images/hug.jpg') }}" alt="" class="img-fluid overlay">
+            <img src="{{ url_for('static', filename='images/dense-forest.jpg') }}" alt="" class="img-fluid overlay">
           </div>
         </div>
         <div class="col-md-4 mission-col">
@@ -69,5 +71,67 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
+
+<!-- our team -->
+<section class="team-wrapper">
+  <h2 class="team-heading">Our Team.</h2>
+  <div class="person">
+    <div class="container">
+      <div class="container-inner">
+        <!-- <img src="{{ url_for('static', filename='images/circle1.jpg') }}" alt="" class="circle"> -->
+        <img src="{{ url_for('static', filename='images/Shobha_Motghare.jpeg') }}" alt="" class="img img1">
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="name">Shobha Motghare</div>
+    <div class="title">Secretary</div>
+  </div>
+
+  <div class="person">
+    <div class="container">
+      <div class="container-inner">
+        <img src="{{ url_for('static', filename='images/Payal_Badhe.jpg') }}" alt="" class="img img2">
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="name">Payal Badhe</div>
+    <div class="title">President</div>
+  </div>
+
+  <div class="person">
+    <div class="container">
+      <div class="container-inner">
+        <img src="{{ url_for('static', filename='images/Bharti_Shendre.jpg') }}" alt="" class="img img3">
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="name">Bharti Shendre</div>
+    <div class="title">Treasurer</div>
+  </div>
+
+  <div class="person">
+    <div class="container">
+      <div class="container-inner">
+        <img src="{{ url_for('static', filename='images/Nilima_Kalambe.jpg') }}" alt="" class="img img4">
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="name">Nilima Kalambe</div>
+    <div class="title">Advisor</div>
+  </div>
+</section>
+
+<script>
+  const images = {{ images|tojson }};
+  let currentIndex = 0;
+
+  function changeImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("changingImage").src = images[currentIndex];
+  }
+
+  document.getElementById("changeButton").onclick = changeImage;
+  setInterval(changeImage, 3000);
+</script>
 {% endblock %}

@@ -1,41 +1,101 @@
 {% extends "layout.html" %}
 
 {% block title %}
-- donate
+- Donate
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/donateStyles.css') }}">
 {% endblock %}
 
 {% block content %}
-<!-- Banner Section -->
-<section class="banner donate-banner">
-  <div class="container">
-    <h1>Make a Difference</h1>
-    <p>Your donation can change lives and build a better future.</p>
+<header>
+  <div class="parallax">
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="#">Donate</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="donate-section">
+  <h1>Support Our Campaigns</h1>
+  <div class="donate-container">
+
+      <!-- Clothes Distribution Card -->
+      <div class="donate-card">
+          <h2>👕 Clothes Distribution</h2>
+          <p>Help us provide essential clothing to those in need, ensuring warmth and dignity.</p>
+          <span class="donation-amount">₹2000</span>
+          <a href="https://pages.razorpay.com/pl_PNqr3Fn1KJ5Nzk/view" class="donate-button" target="_blank">Donate Now</a>
+      </div>
+
+      <!-- Food Distribution Card -->
+      <div class="donate-card">
+          <h2>🍲 Food Distribution</h2>
+          <p>Help us serve nutritious meals to underprivileged communities.</p>
+          <span class="donation-amount">₹5000</span>
+          <a href="https://pages.razorpay.com/pl_PNV8LO3zFLvW8P/view" class="donate-button" target="_blank">Donate Now</a>
+      </div>
+
+      <!-- Education Card -->
+      <div class="donate-card">
+          <h2>📚 Education</h2>
+          <p>Support education by funding materials and resources for children in need.</p>
+          <span class="donation-amount">₹10000</span>
+          <a href="https://pages.razorpay.com/pl_PNqtcvyo8at4QT/view" class="donate-button" target="_blank">Donate Now</a>
+      </div>
+
+      <!-- Empower Her Future Card -->
+      <div class="donate-card">
+          <h2>🌸 Empower Her Future</h2>
+          <p>Support initiatives that empower women through education, skills, and opportunities.</p>
+          <span class="donation-amount">₹15000</span>
+          <a href="https://pages.razorpay.com/pl_PNqt0egn0pTKRQ/view" class="donate-button" target="_blank">Donate Now</a>
+      </div>
+
+      <!-- Health Care Card -->
+      <div class="donate-card">
+          <h2>🏥 Health Care</h2>
+          <p>Provide critical medical aid, health check-ups, and medicines to those in need.</p>
+          <span class="donation-amount">₹20000</span>
+          <a href="https://pages.razorpay.com/pl_PNqvh8mf1ORde8/view" class="donate-button" target="_blank">Donate Now</a>
+      </div>
+
+      <!-- Support a Smile Card -->
+      <div class="donate-card">
+          <h2>😊 Support a Smile</h2>
+          <p>Contribute to mental health programs, recreational activities, and well-being support.</p>
+          <span class="donation-amount">Any Amount</span>
+          <a href="https://pages.razorpay.com/pl_PNztFxhixjKywz/view" class="donate-button" target="_blank">Donate Now</a>
+      </div>
+
   </div>
 </section>
 
-<!-- Donation Form Section -->
-<section class="donation-form-section">
-  <div class="container">
-    <h2>Support Us Today</h2>
-    <p class="donation-text">Fill out the form below to make a donation. Your contributions matter!</p>
-    <form class="donation-form" action="{{ url_for('submit_donation') }}" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-      
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-      
-      <label for="amount">Donation Amount (₹):</label>
-      <input type="number" id="amount" name="amount" placeholder="Enter the donation amount" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Leave a message (optional)"></textarea>
-      
-      <button type="submit" class="donate-btn">Donate Now</button>
-    </form>
+<section class="bank-details-section">
+  <h2>Bank Account Details</h2>
+  <div class="bank-details-container">
+
+      <!-- Bank Details Column -->
+      <div class="bank-details">
+        <h3>For Indian Donors</h3>
+          <ul>
+              <li><strong>Account Name:</strong>Suvidha Mahila Mandal</li>
+              <li><strong>Account Number:</strong> 97840100027609</li>
+              <li><strong>Bank Name:</strong> Bank of Baroda</li>
+              <li><strong>IFSC Code:</strong> BARB0DBKPAR</li>
+              <li><strong>Branch:</strong> Nagpur</li>
+              <li><strong>Contact no:</strong> +91 8010996763</li>
+          </ul>
+      </div>
+
+      <!-- QR Code Column -->
+      <div class="qr-code">
+          <p>Scan to Pay</p>
+          <img src="{{ url_for('static', filename='images/qr-code.jpg') }}" alt="QR Code for Donation" />
+      </div>
   </div>
 </section>
+
 {% endblock %}
