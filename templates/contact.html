@@ -4,43 +4,61 @@
 - Contact Us
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contactStyles.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 <!-- Banner Section -->
-<section class="banner contact-banner">
-  <div class="container">
-    <h1>Contact Us</h1>
-    <p>We're here to assist you. Get in touch today!</p>
+<header>
+  <div class="parallax">
+    <!-- Inspirational Header -->
+    <div class="header-content">
+      <h1>“Every connection brings us closer to a greener tomorrow”</h1>
+      <p>Contact us today and join hands to make a difference!</p>
+    </div>
+
+    <!-- Breadcrumb -->
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li>Contact</li>
+    </ul>
   </div>
-</section>
+</header>
 
 <!-- Contact Section -->
-<section class="contact-section">
-  <div class="container">
-    <div class="contact-info">
-      <h2>Reach Out to Us</h2>
-      <p>Email: info@suvidhafoundation.org</p>
-      <p>Phone: +91 7020044091</p>
-      <p>Address: Suvidha Foundation, Plot No. 123, Sector 45, Pune, Maharashtra, India</p>
-    </div>
 
-    <div class="contact-form">
-      <h2>Send Us a Message</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-        
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-        
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
+<section class="contact-section">
+  <div class="contact-header">
+    <h2>We’d Love to Hear From You</h2>
+    <p>Have questions, ideas, or want to collaborate? Get in touch with us today!</p>
+  </div>
+  <div class="contact-content">
+    <div class="contact-card">
+      <h3>Contact Us Directly</h3>
+      <p>Email: <a href="mailto: info@suvidhafoundationedutech.org"> info@suvidhafoundationedutech.org</a></p>
+      <p>Phone: <a href="tel:+917020044091">+91 7020044091</a></p>
+    </div>
+    <div class="contact-link">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAaaHU-k256CY6_83JPBOYeVFtKuKBvqMJb7oBIsDLKRmwNg/viewform" class="contact-button">Fill Out Our Contact Form</a>
+    </div>
+    <!-- Embedded Google Map -->
+    <div class="contact-map">
+      <h3>Our Location</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.856658179465!2d79.10821917472103!3d21.277140879202257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c5b078211fe7%3A0xd6c9d2d1945e6e1b!2sSuvidha%20Mahila%20Mandal!5e0!3m2!1sen!2sin!4v1734526015017!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
+
+<!-- script for parallax effect -->
+
+<script>
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `-${offset * 0.5}px`;
+});
+</script>
 {% endblock %}

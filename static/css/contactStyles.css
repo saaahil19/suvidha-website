@@ -1,0 +1,246 @@
+.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/contactbanner.jpeg);
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.parallax .header-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.parallax .header-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #e9b000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.parallax .header-content p {
+    font-size: 1.2em;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #dfba32;
+}
+
+ul.breadcrumb {
+    padding: 10px 20px;
+    list-style: none;
+    border-radius: 5px;
+}
+  
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 30px;
+}
+  
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #dfba32;
+    content: "/\00a0";
+}
+  
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #dfba32;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(249, 66, 5);
+    font-family: 'Lato', sans-serif;
+}
+  
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #e9b000;
+    text-shadow: none;
+}
+
+/* Responsive Breadcrumb */
+@media (max-width: 768px) {
+    ul.breadcrumb li {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+
+/*------------------ contact section --------------------*/
+
+.contact-section {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/community.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  
+  .contact-header h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+  }
+  
+  .contact-header p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #f4f4f4;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ff6b6b;
+  }
+  
+  .contact-card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #f4f4f4;
+  }
+  
+  .contact-card a {
+    color: #f4f4f4;
+    text-decoration: none;
+    border-bottom: 1px solid #f4f4f4;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .contact-card a:hover {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+  }
+  
+  .contact-link {
+    margin-top: 20px;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6b6b;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .contact-button:hover {
+    background-color: #ff414d;
+    transform: scale(1.05);
+  }
+  
+  .contact-map {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    color: #ff6b6b;
+  }
+  
+  .contact-map iframe {
+    width: 40%;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+    .parallax .header-content h1 {
+        font-size: 2em; /* Smaller font size for very small screens */
+    }
+
+    .parallax .header-content p, .contact-header p {
+        font-size: 1em;
+    }
+
+    .contact-header h2 {
+        font-size: 1.8em;
+    }
+
+    .contact-card {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .contact-map iframe {
+        width: 100%; /* Full width for the map */
+        height: 250px; /* Reduce height for smaller screens */
+    }
+
+    .contact-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 14px;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .parallax .header-content h1 {
+        font-size: 2.2em;
+    }
+
+    .parallax .header-content p, .contact-header p {
+        font-size: 1.1em;
+    }
+
+    .contact-header h2 {
+        font-size: 2.2em;
+    }
+
+    .contact-card {
+        width: 90%; /* A bit wider on tablets */
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 16px;
+    }
+}
+
+/* For small laptops and desktops: */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact-map iframe {
+        width: 80%; /* Slightly narrower than full width */
+        height: 400px;
+    }
+}

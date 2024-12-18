@@ -14,6 +14,11 @@
     color: #000;
 }
 
+.navbar.animate .donate-link .custom-rounded {
+    color: #dfba32;
+    font-weight: 600;
+}
+
 .parallax {
     display: flex;
     justify-content: center;
@@ -24,6 +29,8 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
 ul.breadcrumb {
@@ -108,6 +115,8 @@ ul.breadcrumb li a:hover {
 }
 
 .donate-card h2 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
     color: #555;
@@ -121,6 +130,7 @@ ul.breadcrumb li a:hover {
 }
 
 .donation-amount {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
     display: block;
     font-size: 1.25rem;
     font-weight: bold;
@@ -130,6 +140,7 @@ ul.breadcrumb li a:hover {
 
 /* Donate Button */
 .donate-button {
+    font-family: "Cormorant Garamond", serif;
     display: inline-block;
     background-color: #28a745;
     color: #fff;

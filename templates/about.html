@@ -10,10 +10,10 @@
 
 {% block content %}
 <header>
-  <div class="about-header">
+  <div class="parallax">
     <ul class="breadcrumb">
       <li><a href="/">Home</a></li>
-      <li><a href="#">About us</a></li>
+      <li><a href="#">About Us</a></li>
     </ul>
   </div>
 </header>
@@ -123,15 +123,26 @@
 </section>
 
 <script>
-  const images = {{ images|tojson }};
-  let currentIndex = 0;
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `-${offset * 0.5}px`;
+});
 
-  function changeImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      document.getElementById("changingImage").src = images[currentIndex];
-  }
 
-  document.getElementById("changeButton").onclick = changeImage;
-  setInterval(changeImage, 3000);
+const images = {{ images|tojson }};
+let currentIndex = 0;
+
+function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("changingImage").src = images[currentIndex];
+}
+
+document.getElementById("changeButton").onclick = changeImage;
+setInterval(changeImage, 3000);
+</script>
+
+<script>
+  
 </script>
 {% endblock %}

@@ -33,7 +33,7 @@
 
 /* ---------------------------------- banner -----------------------------*/
 
-.about-header {
+.parallax {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +43,8 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
 ul.breadcrumb {
