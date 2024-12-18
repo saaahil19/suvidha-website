@@ -77,19 +77,6 @@ body, ul, li, a {
   background-color: #e7c118;
 }
 
-.social-link .fa-linkedin, .social-link .fa-instagram {
-  color: white;
-  transition: color 0.4s ease;
-}
-
-.social-link:hover .fa-linkedin {
-  color: #0063c8; 
-}
-
-.social-link:hover .fa-instagram {
-  color: #9c4bb9;
-}
-
 .navbar-nav .apply-link .custom-rounded, .landing3 .get-involved {
   background-color: transparent;
   color: white;
@@ -158,11 +145,13 @@ body, ul, li, a {
 .fixed-social-links {
   position: fixed;
   right: 0;
-  top: 180px; /*180px */
+  top: 50%; /*180px */
   transform: translateY(-50%);
-  background-color: #5eb7f7;
-  padding: 10px;
+  background-color: #fafafa;
+  padding: 20px 10px;
   z-index: 100;
+  border-radius: 8px 0 0 8px;
+  transition: all 300ms ease;
 }
 
 .fixed-social-links .nav-item {
@@ -175,14 +164,41 @@ body, ul, li, a {
   justify-content: center;
   width: 35px;
   height: 40px;
-  color: white;
   margin: 0;
-  padding: 0;
+}
+
+.social-link .fa-linkedin, .social-link .fa-instagram {
+  color: #111;
+  transition: color 0.4s ease;
+}
+
+.fixed-social-links.animate .fa-instagram, .fixed-social-links.animate .fa-linkedin {
+  color: #111;
+}
+
+.social-link:hover .fa-linkedin {
+  color: #1da1f2;
+}
+
+.social-link:hover .fa-instagram {
+  color: #c32aa3;
 }
 
 .fixed-social-links.animate {
   position: fixed;
   top: 124px; /* 124px */
+  right: 0;
+  background-color: #fafafa;
+  padding: 16px 8px;
+  border-radius: 8px 0 0 8px;
+  transition: all 300ms ease;
+  box-shadow: -4px 0px 0px hotpink;
+  border: none;
+}
+
+.fixed-social-links.animate:hover {
+  box-shadow: -8px 0px 20px hotpink;
+  padding: 1em;
 }
 
 /* General Media Query for Tablet & Mobile Screens */
