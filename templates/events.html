@@ -3,6 +3,9 @@
 {% block title %}
 - Events
 {% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/eventstyles.css') }}">
+{% endblock %}
 
 {% block content %}
 <!-- Banner Section -->
@@ -12,7 +15,6 @@
     <p>Empowering lives through impactful events and initiatives.</p>
   </div>
 </section>
-
 <!-- Events Section -->
 <section class="events-section">
   <div class="container">
@@ -20,7 +22,7 @@
     <div class="events-grid">
       <!-- Event 1 -->
       <div class="event-card">
-        <img src="{{ url_for('static', filename='images/event1.jpg') }}" alt="Event 1">
+        <img src="{{ url_for('static', filename='images/event1.jpeg') }}" alt="Event 1">
         <h3>Health Camp for Underprivileged</h3>
         <p>Date: 15th Dec 2024</p>
         <p>Location: Pune, Maharashtra</p>
@@ -36,7 +38,7 @@
       </div>
       <!-- Event 3 -->
       <div class="event-card">
-        <img src="{{ url_for('static', filename='images/event3.jpg') }}" alt="Event 3">
+        <img src="{{ url_for('static', filename='images/event3.jpeg') }}" alt="Event 3">
         <h3>Educational Workshop</h3>
         <p>Date: 5th Jan 2025</p>
         <p>Location: Delhi</p>
