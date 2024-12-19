@@ -3,6 +3,10 @@
 {% block title %}
 - Gallery
 {% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gallerystyles.css') }}">
+{% endblock %}
+
 
 {% block content %}
 <!-- Banner Section -->
@@ -20,7 +24,7 @@
     <div class="gallery-grid">
       <!-- Gallery Image 1 -->
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='images/gallery1.jpg') }}" alt="Event 1">
+        <img src="{{ url_for('static', filename='images/gallery1.jpeg') }}" alt="Event 1">
         <div class="overlay">
           <p>Health Camp for Underprivileged</p>
         </div>
@@ -34,7 +38,7 @@
       </div>
       <!-- Gallery Image 3 -->
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='images/gallery3.jpg') }}" alt="Event 3">
+        <img src="{{ url_for('static', filename='images/gallery3.jpeg') }}" alt="Event 3">
         <div class="overlay">
           <p>Educational Workshop</p>
         </div>
@@ -48,7 +52,7 @@
       </div>
       <!-- Gallery Image 5 -->
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='images/gallery5.jpg') }}" alt="Event 5">
+        <img src="{{ url_for('static', filename='images/gallery5.jpeg') }}" alt="Event 5">
         <div class="overlay">
           <p>Community Clean-Up Drive</p>
         </div>
