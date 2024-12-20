@@ -1,36 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
 
-/* ------------------------------------ navbar ---------------------------------------*/
-.navbar {
-    background-color: transparent;
-}
-
-.navbar.animate {
-    background-color: white;
-}
-
-.navbar-nav .apply-link .custom-rounded {
-    color: white;
-}
-
-.navbar.animate .nav-link {
-    color: #000;
-}
-
-.navbar-nav .donate-link .custom-rounded {
-    background-color: #c54d6d;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-}
-
-.navbar-nav .donate-link .custom-rounded:hover {
-    background: linear-gradient(135deg, #c54d6d, #8a3c54); 
-    background-color: #c54d6d;
-}
-
 /* ---------------------------------- banner -----------------------------*/
 
 .parallax {

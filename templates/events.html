@@ -3,24 +3,34 @@
 {% block title %}
 - Events
 {% endblock %}
+
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/eventstyles.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<!-- Banner Section -->
-<section class="banner events-banner">
-  <div class="container">
-    <h1>Our Events</h1>
-    <p>Empowering lives through impactful events and initiatives.</p>
+<header>
+  <div class="parallax">
+    <!-- Inspirational Header -->
+    <div class="header-content">
+      <h1>"Transforming Lives Together"</h1>
+      <p>Discover how our events are making a difference in communities worldwide.</p>
+    </div>
+
+    <!-- Breadcrumb -->
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="#">Events</a></li>
+    </ul>
   </div>
-</section>
+</header>
+
 <!-- Events Section -->
 <section class="events-section">
   <div class="container">
     <h2 class="section-title">Upcoming & Past Events</h2>
     <div class="events-grid">
-      <!-- Event 1 -->
       <div class="event-card">
         <img src="{{ url_for('static', filename='images/event1.jpeg') }}" alt="Event 1">
         <h3>Health Camp for Underprivileged</h3>
@@ -28,7 +38,7 @@
         <p>Location: Pune, Maharashtra</p>
         <p>Join us in providing free healthcare services to those in need.</p>
       </div>
-      <!-- Event 2 -->
+
       <div class="event-card">
         <img src="{{ url_for('static', filename='images/event2.jpg') }}" alt="Event 2">
         <h3>Blood Donation Drive</h3>
@@ -36,7 +46,7 @@
         <p>Location: Mumbai, Maharashtra</p>
         <p>Save lives by participating in our blood donation initiative.</p>
       </div>
-      <!-- Event 3 -->
+
       <div class="event-card">
         <img src="{{ url_for('static', filename='images/event3.jpeg') }}" alt="Event 3">
         <h3>Educational Workshop</h3>
@@ -44,7 +54,7 @@
         <p>Location: Delhi</p>
         <p>Empowering children with educational tools and knowledge.</p>
       </div>
-      <!-- Event 4 -->
+
       <div class="event-card">
         <img src="{{ url_for('static', filename='images/event4.jpg') }}" alt="Event 4">
         <h3>Environmental Awareness Drive</h3>
@@ -55,5 +65,14 @@
     </div>
   </div>
 </section>
+
+<!-- script for parallax effect -->
+<script>
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `-${offset * 0.5}px`;
+});
+</script>
 
 {% endblock %}

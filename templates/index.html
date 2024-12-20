@@ -85,14 +85,15 @@
 <!---------------------------- landing page 4 ------------------------>
 <section class="landing4">
 <div class="container section-container">
-  <div class="row justify-content-center g-4">
+  <h1>Get Involved with Suvidha Foundation</h1>
+  <div class="row">
     <!-- First box -->
     <div class="col-md-6">
       <div class="custom-box">
           <div class="custom-line"></div>
           <h2>Internship oppotunities</h2>
           <p>The Suvidha Foundation Internship Program is a unique opportunity for students and recent graduates to gain experience and contribute to the work of Suvidha Foundation. Join our team and gain valuable experience while making a difference. Apply now to start your journey with us!</p>
-          <button class="btn btn-custom">Apply for Internship</button>
+           <a class="btn btn-custom" href="https://docs.google.com/forms/d/e/1FAIpQLSe4vDnye2muE9yynJek6Swvamie2Idbu-LWAhQa0oMus5KJDg/viewform" target="_blank">Apply for Internship</a>
       </div>
     </div>
     <!-- Second box -->
@@ -100,13 +101,13 @@
       <div class="custom-box">
         <div class="custom-line"></div>
         <h2>Donate now</h2>
-        <p>Your contributions help us continue our mission. Donate now to support our cause and make an impact!</p>
-        <button class="btn btn-custom">Donate here</button>
+        <p>Your generosity helps us plant more trees, feed the hungry, and bring smiles to those in need. With your donation, you're not just giving; you're building a future filled with opportunities, sustainability, and care. Together, we can make a difference!</p>
+        <a class="btn btn-custom" href="{{ url_for('donate') }}" target="_blank">Donate now</a>
       </div>
      </div>
   </div>
 </div>
-</section>
+</section>  
 
 <!---------------------------------- testimonials ------------------------------>
 
@@ -150,8 +151,14 @@
   </div>
 </section>
 
-<!------------ script for testimonial slider --------------->
+<!------------ script for parallax banner and testimonial slider --------------->
 <script>
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.hero');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `-${offset * 0.5}px`;
+});
+  
   document.addEventListener("DOMContentLoaded", function () {
     const list = document.querySelector(".testimonial-list");
     const leftBtn = document.querySelector(".slider-btn-left");

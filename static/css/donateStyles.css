@@ -1,24 +1,3 @@
-.navbar {
-    background-color: transparent;
-}
-
-.navbar.animate {
-    background-color: white;
-}
-
-.navbar-nav .apply-link .custom-rounded {
-    color: white;
-}
-
-.navbar.animate .nav-link {
-    color: #000;
-}
-
-.navbar.animate .donate-link .custom-rounded {
-    color: #dfba32;
-    font-weight: 600;
-}
-
 .parallax {
     display: flex;
     justify-content: center;
@@ -167,6 +146,10 @@ ul.breadcrumb li a:hover {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        background: linear-gradient(to bottom, rgba(26,26,26,0.9) 0%, rgba(51,51,51,0.9) 100%);
+    }
+
     .parallax {
         background-attachment: scroll;
         background-size: cover;
@@ -198,6 +181,10 @@ ul.breadcrumb li a:hover {
 }
 
 @media (max-width: 576px) {
+    .navbar {
+        background: linear-gradient(to bottom, rgba(26,26,26,0.9) 0%, rgba(51,51,51,0.9) 100%);
+    }
+
     .parallax {
         background-size: cover;
         min-height: 200px;

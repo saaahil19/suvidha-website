@@ -29,7 +29,7 @@ def events():
 
 @app.route('/gallery')
 def gallery():
-    return render_template('gallery.html')
+    return render_template('events.html')
 
 @app.route('/contact')
 def contact():

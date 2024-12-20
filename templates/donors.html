@@ -4,43 +4,63 @@
 - Donors
 {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/donorsStyles.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
-<!-- Banner Section -->
-<section class="banner donors-banner">
-  <div class="container">
-    <h1>Our Donors</h1>
-    <p>Celebrating the generosity and kindness of those who believe in our mission.</p>
+<header>
+  <div class="parallax">
+    <!-- Inspirational Header -->
+    <div class="header-content">
+      <h1>Thank you for your generosity</h1>
+    </div>
+
+    <!-- Breadcrumb -->
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="#">Donors</a></li>
+    </ul>
   </div>
+</header>
+
+<section class="donors-section">
+  <h1>Our Generous Donors</h1>
+    <table class="donors-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount Donated (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="donor-name">Sahil Ghuge</td>
+                <td>500000</td>
+            </tr> 
+            <tr>
+                <td class="donor-name">ABC</td>
+                <td>25000</td>
+            </tr>
+            <tr>
+                <td class="donor-name">EFG</td>
+                <td>20000</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="legend">
+        <!-- Removed color coding for simplicity -->
+    </div>
 </section>
 
-<!-- Donors Section -->
-<section class="donors-section">
-  <div class="container">
-    <h2 class="section-title">Acknowledging Our Supporters</h2>
-    <div class="donor-list">
-      <!-- Example Donor 1 -->
-      <div class="donor-card">
-        <img src="{{ url_for('static', filename='images/donor1.png') }}" alt="Donor 1">
-        <h3>Mr. John Doe</h3>
-        <p>Contribution: ₹1,00,000</p>
-        <p>Message: "Empowering communities is the key to a brighter future."</p>
-      </div>
-      <!-- Example Donor 2 -->
-      <div class="donor-card">
-        <img src="{{ url_for('static', filename='images/donor2.png') }}" alt="Donor 2">
-        <h3>Ms. Jane Smith</h3>
-        <p>Contribution: ₹75,000</p>
-        <p>Message: "Proud to support the impactful work of Suvidha Foundation."</p>
-      </div>
-      <!-- Example Donor 3 -->
-      <div class="donor-card">
-        <img src="{{ url_for('static', filename='images/donor3.png') }}" alt="Donor 3">
-        <h3>XYZ Corporation</h3>
-        <p>Contribution: ₹2,00,000</p>
-        <p>Message: "Committed to making a difference through our CSR initiatives."</p>
-      </div>
-      <!-- Add more donor cards as needed -->
-    </div>
-  </div>
-</section>
+<!-- script for parallax effect -->
+<script>
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = `-${offset * 0.5}px`;
+});
+</script>
 {% endblock %}
