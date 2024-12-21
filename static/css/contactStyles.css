@@ -41,20 +41,17 @@ ul.breadcrumb {
     border-radius: 5px;
 }
   
-/* Display list items side by side */
 ul.breadcrumb li {
     display: inline;
     font-size: 30px;
 }
   
-/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
     padding: 8px;
     color: #dfba32;
     content: "/\00a0";
 }
   
-/* Add a color to all links inside the list */
 ul.breadcrumb li a {
     color: #dfba32;
     text-decoration: none;
@@ -62,13 +59,11 @@ ul.breadcrumb li a {
     font-family: 'Lato', sans-serif;
 }
   
-/* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
     color: #e9b000;
     text-shadow: none;
 }
 
-/* Responsive Breadcrumb */
 @media (max-width: 768px) {
     ul.breadcrumb li {
         font-size: 20px;
@@ -176,68 +171,54 @@ ul.breadcrumb li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-/* For mobile phones: */
 @media only screen and (max-width: 480px) {
     .parallax .header-content h1 {
         font-size: 1.75em;
     }
-
     .parallax .header-content p, .contact-header p {
         font-size: 1em;
     }
-
     .contact-header h2 {
         font-size: 1.8em;
     }
-
     .contact-card {
         width: 100%;
     }
-
     .contact-map iframe {
         width: 100%;
         height: 250px;
     }
-
     .contact-button {
         font-size: 1em;
         padding: 10px 20px;
     }
-
     ul.breadcrumb li {
         font-size: 14px;
     }
 }
 
-/* For tablets: */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     .parallax .header-content h1 {
         font-size: 2.2em;
     }
-
     .parallax .header-content p, .contact-header p {
         font-size: 1.1em;
     }
-
     .contact-header h2 {
         font-size: 2.2em;
     }
-
     .contact-card {
         width: 90%;
     }
-
     .contact-map iframe {
         width: 100%;
         height: 300px;
     }
-
     ul.breadcrumb li {
         font-size: 16px;
     }
 }
 
-/* For small laptops and desktops: */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .contact-map iframe {
         width: 80%;

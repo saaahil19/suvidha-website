@@ -207,7 +207,6 @@ body, ul, li, a {
   transition: transform 0.3s ease;
 }
 
-/* General Media Query for Tablet & Mobile Screens */
 @media (max-width: 992px) {
   .navbar .navbar-nav {
     flex-direction: column; 
@@ -233,27 +232,24 @@ body, ul, li, a {
 }
 
 @media (max-width: 576px) {
-  /* Further Shrink Logo for Phones */
   #logo {
     width: 150px;
   }
-
   .nav-link {
     padding: 8px 5px; 
     font-size: 14px; 
   }
-
   .fixed-social-links {
     top: 50%;
     right: 0;
   }
-
   .fixed-social-links .nav-link {
     width: 30px;
     height: 30px;
     font-size: 14px;
   }
 }
+
 
 .navbar-toggler {
   border: none;
@@ -309,7 +305,7 @@ body, ul, li, a {
   background-color: transparent;
 }
 
-/* Responsive Adjustments for Toggler Button */
+/* Responsive for Toggler Button */
 @media (max-width: 768px) {
   .navbar-toggler {
       display: block;
@@ -446,92 +442,74 @@ footer .copyright {
   opacity: 0.5;
 }
 
-/* For screens up to 1024px (small tablets, large screens) */
 @media (max-width: 1024px) {
   .headquarters, .certificates, .other-links {
     width: 33.33%;
     margin-left: 20px;
   }
-  
   .footer-wrapper {
     justify-content: center;
   }
 }
 
-/* For screens up to 768px (tablets and smaller devices) */
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
   .headquarters, .certificates, .other-links {
     width: 100%;
     margin-left: 20px;
     margin-bottom: 20px;
   }
-
   .certificates, .other-links {
     width: 48%;   
     margin-left: 0;
     margin-bottom: 20px;
   }
-
   footer h3 {
     font-size: 20px;
   }
-
   footer p {
     font-size: 14px;
     line-height: 18px;
   }
-
   footer .bold {
     font-size: 14px;
   }
-
   .footer-links {
     font-size: 14px;
   }
-
   .copyright {
     font-size: 13px;
   }
 }
 
-/* For screens up to 480px (mobile screens) */
 @media (max-width: 480px) {
   .footer-wrapper {
     flex-direction: column;
   }
-
   .headquarters, .certificates, .other-links {
     width: 100%;
     margin-left: 0;
     margin-bottom: 15px;
   }
-
   footer h3 {
     font-size: 18px;
   }
-
   footer p {
     font-size: 12px;
     line-height: 16px;
   }
-
   footer .bold {
     font-size: 12px;
   }
-
   .footer-links {
     font-size: 12px;
   }
-
   .copyright {
     font-size: 12px;
   }
-
   footer .custom-line {
     width: 40px;
   }
@@ -624,30 +602,25 @@ footer .copyright {
 }
 
 /* Responsive Styles */
-/* Adjust for tablets */
 @media (max-width: 768px) {
   .navbar {
     background: linear-gradient(to bottom, rgba(26,26,26,0.9) 0%, rgba(51,51,51,0.9) 100%);
 }
-
   .hero {
     background-position: bottom;
     min-height: 400px;
     padding: 40px 0;
   }
-
   .styledText1 {
     font-size: 22px;
     top: 27%;
     left: 55%;
   }
-  
   .styledText2 {
     font-size: 44px;
     top: 30%;
     left: 50%;
   }
-
   .hero button {
     font-size: 16px;
     padding: 8px 15px;
@@ -660,25 +633,21 @@ footer .copyright {
   .navbar {
     background: linear-gradient(to bottom, rgba(26,26,26,0.9) 0%, rgba(51,51,51,0.9) 100%);
 }
-
   .hero {
     background-size: auto;
     height: 500px;
     background-position: center;
 }
-
   .styledText1 {
     font-size: 18px;
     top: 32%;
     left: 55%;
   }
-
   .styledText2 {
     font-size: 36px;
     top: 35%;
     left: 50%;
   }
-
   .hero button {
     font-size: 14px;
     padding: 6px 12px;
@@ -767,28 +736,22 @@ footer .copyright {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
   .info-section .col {
     flex: 1 1 45%;
     margin-bottom: 20px;
   }
-
   .info-section h1 {
     font-size: 36px;
   }
-
   .info-section .col-image {
     max-height: 180px;
   }
-
   .info-section h2 {
     font-size: 20px;
   }
-
   .info-section p {
     font-size: 14px;
   }
-
   .info-section i {
     font-size: 1.8em;
   }
@@ -798,27 +761,21 @@ footer .copyright {
   .info-section .col {
     flex: 1 1 100%;
   }
-
   .info-section h1 {
     font-size: 30px;
   }
-
   .info-section .col-image {
     max-height: 150px;
   }
-
   .info-section h2 {
     font-size: 18px;
   }
-
   .info-section p {
     font-size: 13px;
   }
-
   .info-section i {
     font-size: 1.5em;
   }
-
   .info-section .col button {
     padding: 15px;
   }
@@ -828,23 +785,18 @@ footer .copyright {
   .info-section h1 {
     font-size: 24px;
   }
-
   .info-section .col-image {
     max-height: 120px;
   }
-
   .info-section h2 {
     font-size: 16px;
   }
-
   .info-section p {
     font-size: 12px;
   }
-
   .info-section i {
     font-size: 1.3em;
   }
-
   .info-section .col button {
     padding: 10px;
   }
@@ -942,102 +894,82 @@ footer .copyright {
   color: #e3e2db;
 }
 
-/* For screens 992px and below */
 @media (max-width: 992px) {
   .landing3 {
     height: auto;
   }
-
   .landing3 .container {
     flex-direction: column;
   }
-
   .landing3 .col-first,
   .landing3 .col-second {
     width: 100%;
     float: none;
   }
-
   .landing3 .col-first {
     position: relative;
     padding: 20px;
   }
-
   .landing3 .large-image {
     width: 100%;
     position: relative;
     top: 0;
     left: 0;
   }
-
   .landing3 .small-image {
     width: 80%;
     position: relative;
     bottom: 0;
     right: 0;
   }
-
   .landing3 .col-second {
     padding: 15px;
   }
-
   .landing3 .col-second .description {
     font-size: 30px;
   }
-
   .landing3 .col-second .details {
     font-size: 14px;
   }
 }
 
-/* For screens 768px and below */
 @media (max-width: 768px) {
   .landing3 .col-second {
     padding: 20px;
   }
-
   .landing3 .large-image {
     width: 80%;
   }
-
   .landing3 .small-image {
     width: 70%;
   }
-
   .landing3 .col-second .description {
     font-size: 26px;
   }
-
   .landing3 .col-second .details {
     font-size: 12px;
   }
 }
 
-/* For screens 480px and below */
 @media (max-width: 480px) {
   .landing3 .col-second .inner-container {
     max-width: 100%;
     padding: 10px;
   }
-
   .landing3 .col-first,
   .landing3 .col-second {
     width: 100%;
     padding: 10px;
   }
-
   .landing3 .large-image {
     width: 100%;
   }
-
   .landing3 .small-image {
     width: 60%;
   }
-
   .landing3 .col-second .description {
     font-size: 22px;
   }
-
   .landing3 .col-second .details {
     font-size: 10px;
   }
@@ -1178,33 +1110,27 @@ footer .copyright {
     padding: 20px;
     padding-bottom: 0;
   }
-
   .section-container h1 {
     font-size: 40px;
     margin: 20px 0;
   }
-
   .row {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-
   .section-container .custom-box {
     width: 100%;
     margin: 15px 10px;
     height: 100%;
   }
-
   .section-container .custom-box h2 {
     font-size: 26px;
     margin-top: 35px;
   }
-
   .section-container .custom-box p {
     font-size: 15px;
     line-height: 1.6;
   }
-
   .btn-custom {
     font-size: 14px;
     padding: 10px 20px;
@@ -1216,33 +1142,27 @@ footer .copyright {
     padding: 15px;
     padding-bottom: 0;
   }
-
   .section-container h1 {
     font-size: 34px;
     margin: 10px 0;
   }
-
   .row {
     flex-direction: column;
     align-items: center;
   }
-
   .section-container .custom-box {
     width: 100%;
     max-width: 600px;
     margin: 10px 0;
   }
-
   .section-container .custom-box h2 {
     font-size: 22px;
     margin-top: 20px;
   }
-
   .section-container .custom-box p {
     font-size: 12px;
     line-height: 1.4;
   }
-
   .btn-custom {
     font-size: 12px;
     padding: 6px 12px;
@@ -1254,21 +1174,17 @@ footer .copyright {
   .landing4 {
     margin-bottom: 0;
   }
-
   .section-container {
     min-height: auto;
   }
-
   .section-container h1 {
     font-size: 26px;
     margin: 10px 0;
   }
-
   .section-container .row {
     flex-direction: column;
     align-items: center;
   }
-
   .section-container .custom-box {
     width: 100%;
     max-width: 350px;
@@ -1276,15 +1192,12 @@ footer .copyright {
     height: auto;
     margin-bottom: 0;
   }
-
   .section-container .custom-box h2 {
     font-size: 18px;
   }
-
   .section-container .custom-box p {
     font-size: 12px;
   }
-
   .btn-custom {
     font-size: 12px;
   }
@@ -1433,27 +1346,22 @@ section.testimonial-slider {
     padding: 0;
     padding-bottom: 20px;
   }
-
   .testimonial-slider h2 {
     font-size: 32px;
     margin: 20px 0;
     padding-bottom: 20px;
   }
-
   .slider-container {
     max-width: 90%;
   }
-
   .testimonial-item {
     flex: 0 0 calc(33.333% - 20px);
     padding: 25px 20px;
     height: auto;
   }
-
   .slider-btn {
     bottom: -40px;
   }
-
   .view-all-button {
     font-size: 14px;
     margin-top: 20px;
@@ -1465,39 +1373,32 @@ section.testimonial-slider {
     padding: 0;
     padding-bottom: 20px;
   }
-
   .testimonial-slider h2 {
     font-size: 28px;
     margin-bottom: 10px;
     padding-bottom: 20px;
   }
-
   .testimonial-list {
     margin-bottom: 20px;
     gap: 10px;
     margin-bottom: 20px;
   }
-
   .slider-container {
     max-width: 95%;
   }
-
   .testimonial-item {
     flex: 0 0 calc(50% - 20px);
     padding: 30px;
     height: auto;
     padding-bottom: 0;
   }
-
   .slider-track-wrapper {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
   }
-
   .slider-btn {
     bottom: -60px;
   }
-
   .view-all-button {
     font-size: 14px;
     margin-top: 20px;
@@ -1509,17 +1410,14 @@ section.testimonial-slider {
     padding: 20px;
     margin-top: 10px;
   }
-
   .slider-container {
     max-width: 100%;
     margin-top: 20px;
   }
-
   .slider-track-wrapper {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
   }
-
   .testimonial-list {
     display: flex;
     flex-wrap: nowrap;
@@ -1531,7 +1429,6 @@ section.testimonial-slider {
     height: auto;
     padding: 20px 15px;
   }
-
   .testimonial-item {
     flex: 0 0 90%;
     margin: 0 auto;
@@ -1540,37 +1437,30 @@ section.testimonial-slider {
     padding-bottom: 0;
     font-size: 16px;
   }
-
   .testimonial-slider h2 {
     font-size: 24px;
     padding-bottom: 20px;
     margin: 20px 0;
   }
-
   .slider-btn-left,
   .slider-btn-right {
     bottom: -50px;
     z-index: 2;
   }
-
   .slider-btn-left {
     left: 15px;
   }
-
   .slider-btn-right {
     right: 15px;
   }
-
   .slider-btn {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
-
   .view-all-button {
     font-size: 14px;
     padding: 8px 16px;
     margin-top: 30px;
   }
 }
- /*------------ end of landing styles -----------------*/

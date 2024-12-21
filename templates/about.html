@@ -140,7 +140,6 @@
   <div class="person">
     <div class="container">
       <div class="container-inner">
-        <!-- <img src="{{ url_for('static', filename='images/circle1.jpg') }}" alt="" class="circle"> -->
         <img src="{{ url_for('static', filename='images/Shobha_Motghare.jpeg') }}" alt="" class="img img1">
       </div>
     </div>
@@ -189,6 +188,7 @@
   </div>
 </section>
 
+<!-- script for banner parallax and changing image -->
 <script>
   window.addEventListener('scroll', function() {
     const parallax = document.querySelector('.parallax');
@@ -199,7 +199,7 @@
 
 const images = {{ images|tojson }};
 let currentIndex = 0;
-let intervalId; // To store the interval ID
+let intervalId;
 
 function changeImage() {
     currentIndex = (currentIndex + 1) % images.length;
@@ -216,7 +216,7 @@ function toggleAnimation() {
       // Animation is stopped, start it
       intervalId = setInterval(changeImage, 3000);
       button.textContent = "❯";
-      changeImage(); // To ensure the image changes immediately on start
+      changeImage();
   }
 }
 

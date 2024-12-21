@@ -25,20 +25,17 @@ ul.breadcrumb {
     margin-top: 75px;
 }
   
-/* Display list items side by side */
 ul.breadcrumb li {
     display: inline;
     font-size: 30px;
 }
   
-/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
     padding: 8px;
     color: #dfba32;
     content: "/\00a0";
 }
   
-/* Add a color to all links inside the list */
 ul.breadcrumb li a {
     color: #dfba32;
     text-decoration: none;
@@ -46,7 +43,6 @@ ul.breadcrumb li a {
     font-family: Arial, Helvetica, sans-serif;
 }
   
-/* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
     color: #f7e410;
 }
@@ -298,7 +294,7 @@ ul.breadcrumb li a:hover {
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-    width: calc(25% - 20px); /* Adjust for space between stats */
+    width: calc(25% - 20px);
     min-width: 180px;
 }
   
@@ -544,7 +540,6 @@ ul.breadcrumb li a:hover {
     filter: brightness(50%);
 }
 
-/* Responsive Grid */
 @media (min-width: 769px) and (max-width: 1024px) {
     .what-we-do {
         width: 80%;
