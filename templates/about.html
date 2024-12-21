@@ -18,11 +18,71 @@
   </div>
 </header>
 
+<!--------------------------- about ngo ---------------------------------->
 <div class="about-welcome">
   <h1>Welcome to Suvidha</h1>
-  <img id="changingImage" src="{{ url_for('static', filename='images/socialwork.jpg') }}" alt="" class="social-work">
-  <button id="changeButton" class="changeButton">&#10095;</button>
+  <div class="image-wrapper">
+    <img id="changingImage" src="{{ url_for('static', filename='images/socialwork.jpg') }}" alt="" class="social-work">
+    <button id="toggleButton" class="changeButton">&#10095;</button>
+  </div>
 </div>
+
+<section class="about-suvidha">
+  <div class="container">
+    <div class="about-content">
+      <p class="about-description">
+        Since its inception on September 8, 1995, Suvidha Mahila Mandal, now known as Suvidha Foundation, has been a beacon of hope, dedicated to illuminating the lives of the underprivileged through education. <strong> Our mission is to ensure parity in education, fostering the strength of young minds to build a promising future.</strong>
+      </p>
+      <div class="mission-vision">
+        <div class="mission">
+          <h3>Mission</h3>
+          <ul>
+            <li><strong>Imparting Education:</strong> Bridging the educational divide by offering quality education to financially challenged children</li>
+            <li><strong>Empowering Communities:</strong> Enhancing lives through social awareness, healthcare, and vocational training</li>
+            <li><strong>Building a Sustainable Future:</strong> Promoting environmental consciousness with initiatives like tree plantation drives</li>
+          </ul>
+        </div>
+        <div class="vision">
+          <h3>Vision</h3>
+          <p>We envision a world where everyone has access to equal opportunities, quality education, and a sustainable, healthy environment.</p>
+        </div>
+      </div>
+      <div class="impact-stats">
+        <div class="stat">
+          <div class="icon-circle globe"><i class="fas fa-globe"></i></div>
+          <h3>Countries</h3>
+          <p>15+ Served</p>
+        </div>
+        <div class="stat">
+          <div class="icon-circle handshake"><i class="fas fa-handshake"></i></div>
+          <h3>Volunteers</h3>
+          <p>3Lakh+</p>
+        </div>
+        <div class="stat">
+          <div class="icon-circle leaf"><i class="fas fa-leaf"></i></div>
+          <h3>Trees</h3>
+          <p>54Lakh+ Planted</p>
+        </div>
+        <div class="stat">
+          <div class="icon-circle graduation-cap"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Internships</h3>
+          <p>1Cr+ Goal</p>
+        </div>
+      </div>
+      <div class="engagement">
+        <p class="engagement-intro">Join us in our journey through:</p>
+        <ul class="engagement-list">
+          <li><strong>Student Internships:</strong> For hands-on learning experiences</li>
+          <li><strong>Student Mentorship:</strong> To guide and inspire</li>
+          <li><strong>Volunteering:</strong> To make a direct impact on our projects</li>
+        </ul>
+      </div>
+      <a href="/contact" class="learn-more">Learn More about our Work</a>
+    </div>
+  </div>
+</section>
+
+<!---------------------------- what we do ---------------------------->
 
 <section class="mission-wrapper">
     <div class="what-we-do">
@@ -73,7 +133,8 @@
     </div>
 </section>
 
-<!-- our team -->
+<!---------------------------- our team ---------------------------------->
+
 <section class="team-wrapper">
   <h2 class="team-heading">Our Team.</h2>
   <div class="person">
@@ -86,6 +147,9 @@
     <div class="divider"></div>
     <div class="name">Shobha Motghare</div>
     <div class="title">Secretary</div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/shobha-motghare-0a6a57238/"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 
   <div class="person">
@@ -97,6 +161,9 @@
     <div class="divider"></div>
     <div class="name">Payal Badhe</div>
     <div class="title">President</div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/payal-badhe-531756aa/"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 
   <div class="person">
@@ -132,14 +199,29 @@
 
 const images = {{ images|tojson }};
 let currentIndex = 0;
+let intervalId; // To store the interval ID
 
 function changeImage() {
     currentIndex = (currentIndex + 1) % images.length;
     document.getElementById("changingImage").src = images[currentIndex];
 }
 
-document.getElementById("changeButton").onclick = changeImage;
-setInterval(changeImage, 3000);
+function toggleAnimation() {
+  const button = document.getElementById("toggleButton");
+  if (button.textContent === "❯") {
+      // Animation is running, stop it
+      clearInterval(intervalId);
+      button.textContent = "▶";
+  } else {
+      // Animation is stopped, start it
+      intervalId = setInterval(changeImage, 3000);
+      button.textContent = "❯";
+      changeImage(); // To ensure the image changes immediately on start
+  }
+}
+
+document.getElementById("toggleButton").onclick = toggleAnimation;
+intervalId = setInterval(changeImage, 3000);
 </script>
 
 <script>

@@ -214,22 +214,18 @@ body, ul, li, a {
     align-items: center; 
     text-align: center;
   }
-
   #logo {
     width: 180px;
   }
-
   .navbar-nav .apply-link,
   .navbar-nav .donate-link {
     margin: 5px 0;
   }
-
   .navbar-nav .apply-link .custom-rounded,
   .navbar-nav .donate-link .custom-rounded {
     padding: 10px 12px;
     font-size: 14px;
   }
-
   .fixed-social-links {
     top: 50%;
     right: 0;
