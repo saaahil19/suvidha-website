@@ -21,8 +21,6 @@
 <section class="donate-section">
   <h1>Support Our Campaigns</h1>
   <div class="donate-container">
-
-      <!-- Clothes Distribution Card -->
       <div class="donate-card">
           <h2>👕 Clothes Distribution</h2>
           <p>Help us provide essential clothing to those in need, ensuring warmth and dignity.</p>
@@ -30,7 +28,6 @@
           <a href="https://pages.razorpay.com/pl_PNqr3Fn1KJ5Nzk/view" class="donate-button" target="_blank">Donate Now</a>
       </div>
 
-      <!-- Food Distribution Card -->
       <div class="donate-card">
           <h2>🍲 Food Distribution</h2>
           <p>Help us serve nutritious meals to underprivileged communities.</p>
@@ -38,7 +35,6 @@
           <a href="https://pages.razorpay.com/pl_PNV8LO3zFLvW8P/view" class="donate-button" target="_blank">Donate Now</a>
       </div>
 
-      <!-- Education Card -->
       <div class="donate-card">
           <h2>📚 Education</h2>
           <p>Support education by funding materials and resources for children in need.</p>
@@ -46,7 +42,6 @@
           <a href="https://pages.razorpay.com/pl_PNqtcvyo8at4QT/view" class="donate-button" target="_blank">Donate Now</a>
       </div>
 
-      <!-- Empower Her Future Card -->
       <div class="donate-card">
           <h2>🌸 Empower Her Future</h2>
           <p>Support initiatives that empower women through education, skills, and opportunities.</p>
@@ -54,7 +49,6 @@
           <a href="https://pages.razorpay.com/pl_PNqt0egn0pTKRQ/view" class="donate-button" target="_blank">Donate Now</a>
       </div>
 
-      <!-- Health Care Card -->
       <div class="donate-card">
           <h2>🏥 Health Care</h2>
           <p>Provide critical medical aid, health check-ups, and medicines to those in need.</p>
@@ -62,22 +56,20 @@
           <a href="https://pages.razorpay.com/pl_PNqvh8mf1ORde8/view" class="donate-button" target="_blank">Donate Now</a>
       </div>
 
-      <!-- Support a Smile Card -->
       <div class="donate-card">
           <h2>😊 Support a Smile</h2>
           <p>Contribute to mental health programs, recreational activities, and well-being support.</p>
           <span class="donation-amount">Any Amount</span>
           <a href="https://pages.razorpay.com/pl_PNztFxhixjKywz/view" class="donate-button" target="_blank">Donate Now</a>
       </div>
-
   </div>
 </section>
 
+<!--------------------- bank details section -------------------->
 <section class="bank-details-section">
   <h2>Bank Account Details</h2>
   <div class="bank-details-container">
 
-      <!-- Bank Details Column -->
       <div class="bank-details">
         <h3>For Indian Donors</h3>
           <ul>
@@ -90,7 +82,6 @@
           </ul>
       </div>
 
-      <!-- QR Code Column -->
       <div class="qr-code">
           <p>Scan to Pay</p>
           <img src="{{ url_for('static', filename='images/qr-code.jpg') }}" alt="QR Code for Donation" />
@@ -98,6 +89,7 @@
   </div>
 </section>
 
+<!-- script for banner parallax effect -->
 <script>
   window.addEventListener('scroll', function() {
     const parallax = document.querySelector('.parallax');

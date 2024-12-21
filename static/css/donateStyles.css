@@ -86,6 +86,9 @@ ul.breadcrumb li a:hover {
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .donate-card:hover {
@@ -117,7 +120,6 @@ ul.breadcrumb li a:hover {
     color: #28a745;
 }
 
-/* Donate Button */
 .donate-button {
     font-family: "Cormorant Garamond", serif;
     display: inline-block;
@@ -128,6 +130,7 @@ ul.breadcrumb li a:hover {
     text-decoration: none;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    align-self: center;
 }
 
 .donate-button:hover {
